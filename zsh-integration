@@ -1,0 +1,21 @@
+local k8s_info='$(_k8s_info)'
+_k8s_info() {
+        if [[ -v KUBECONFIG ]]; then
+                echo -n " k8s:"
+                k8s_cfg_name=$(basename "$KUBECONFIG")
+
+                color_file=~/.config/direnv-k8s/"$k8s_cfg_name"/color
+
+                if  [[ -f "$color_file" ]]; then
+                        color=$(<"$color_file")
+                else
+                        color="blue"
+                fi
+
+                echo -n "$bg[$color]$k8s_cfg_name$reset_color"
+
+                if [[ -v KUBECONFIG_NAMESPACE ]]; then
+                        echo -n "/$terminfo[bold]$fg[$color]$KUBECONFIG_NAMESPACE$reset_color"
+                fi
+        fi
+}

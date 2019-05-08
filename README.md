@@ -23,3 +23,15 @@ This script will use the basename of the current working directory as a name for
 1.  cd into the directory, and notice that direnv complains about the env not being allowed yet
 1.  READ THROUGH THE ENTIRY `.envrc` (or `create-environment.sh`) SCRIPT, AND CONFIRM THAT IT DOESN'T DO ANYTHING NASTY!
 1.  If happy with the above, run `direnv allow .`
+
+Repeat the above steps for each k8s environment you want to access.
+
+
+# oh-my-zsh integration
+
+1.  source `zsh-integration` from your theme
+2.  add `${k8s_info}` somewhere in the PROMPT-definition
+
+This will add something like `k8s:cluster/namespace` to the prompt. Colors can be controlled by writing the desired color name (e.g. "red") to `~/.config/direnv-k8s/$name/color`, where `$name` has the same meaning as in the previous sections.
+
+Done.
