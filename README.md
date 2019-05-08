@@ -21,8 +21,8 @@ This script will use the basename of the current working directory as a name for
 1.  create a directory named `$name`
 1.  create a symlink from `create-environment.sh` to `$name/.envrc`
 1.  cd into the directory, and notice that direnv complains about the env not being allowed yet
-1.  READ THROUGH THE ENTIRY `.envrc` (or `create-environment.sh`) SCRIPT, AND CONFIRM THAT IT DOESN'T DO ANYTHING NASTY!
-1.  If happy with the above, run `direnv allow .`
+1.  READ THROUGH THE ENTIRE `.envrc` (or `create-environment.sh`) SCRIPT, AND CONFIRM THAT IT DOESN'T DO ANYTHING NASTY!
+1.  if happy with the above, run `direnv allow .`
 
 Repeat the above steps for each k8s environment you want to access.
 
