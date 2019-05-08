@@ -35,3 +35,21 @@ Repeat the above steps for each k8s environment you want to access.
 This will add something like `k8s:cluster/namespace` to the prompt. Colors can be controlled by writing the desired color name (e.g. "red") to `~/.config/direnv-k8s/$name/color`, where `$name` has the same meaning as in the previous sections.
 
 Done.
+
+## Example prompt
+
+My theme is based on the "ys" theme, with the k8s info added just before the git part of the prompt.
+
+### Default with default namespace
+
+![prompt with default namespace](/screenshots/default-no-ns.png)
+
+
+### Default with namespace
+
+![prompt with namespace](/screenshots/default-with-ns.png)
+
+
+### Custom colors
+
+![prompt with custom colors](/screenshots/custom-color.png)
